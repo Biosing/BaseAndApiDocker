@@ -2,6 +2,6 @@
 {
     public static class DataAnnotationErrorMessages
     {
-        public const string IncorrectEmailOrPassword = nameof(IncorrectEmailOrPassword);
+        public const string IncorrectIINOrPassword = nameof(IncorrectIINOrPassword);
     }
 }

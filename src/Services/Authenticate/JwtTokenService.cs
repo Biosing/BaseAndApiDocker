@@ -1,7 +1,9 @@
 ﻿using Database;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Models.Users;
+using Models.ValueObjects;
 using Services.Authenticate.Requests;
 using Services.Users;
 using Services.Utils;
@@ -26,12 +28,20 @@ namespace Services.Authenticate
         public async Task<string> AuthenticateAsync(UserCredentialRequests userCredential)
         {
             userCredential.ThrowIfNull(nameof(userCredential));
-
+            
+            if (await _context.Users.FirstOrDefaultAsync(x => x.IIN == "123456789001") == null)
+            {
+                await _context
+                    .Users
+                    .AddAsync(
+                        new User("Admin", "123456789001", new UserPasswordHash("Qwerty123$").Value()));
+                await _context.SaveChangesAsync();
+            }
+            
             User user = await UserOrFailAsync(userCredential.IIN);
-
             if (!user.HashedPassword().Same(userCredential.Password))
             {
-                throw new InputValidationException(DataAnnotationErrorMessages.IncorrectEmailOrPassword);
+                throw new InputValidationException(DataAnnotationErrorMessages.IncorrectIINOrPassword);
             }
 
             var key = _configuration.GetSection("JwtConfig:Key").Value;
@@ -55,7 +65,7 @@ namespace Services.Authenticate
         private async Task<User> UserOrFailAsync(string email)
         {
             return await _context.UserOrNullAsync(email)
-                   ?? throw new InputValidationException(DataAnnotationErrorMessages.IncorrectEmailOrPassword);
+                   ?? throw new InputValidationException(DataAnnotationErrorMessages.IncorrectIINOrPassword);
         }
     }
 }

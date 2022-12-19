@@ -1,0 +1,41 @@
+version: '3.4'
+
+networks:
+  doc-network:
+    driver: bridge
+
+services:
+  doc-web-api:
+    container_name: doc-web-api
+    image: doc/web-api
+    restart: always
+    depends_on:
+      - db
+    build:
+      context: ./src
+      dockerfile: BaseAndApiDocker/Dockerfile
+    environment:
+      ASPNETCORE_Kestrel__Certificates__Default__Password: password
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /https/aspnetapp.pfx
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:5001
+      ASPNETCORE_HTTPS_PORT: 5001
+      ConnectionStrings:Database: Server=db; Database=db-docker-dev; User Id=sa; Password=Str0ngPass!;
+    ports:
+      - 5001:5001
+    networks:
+      - doc-network
+    volumes:
+      - ~/.aspnet/https:/https:ro
+
+  db:
+    container_name: doc-database
+    restart: always
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1433:1433
+    environment:
+      SA_PASSWORD: "Str0ngPass!"
+      ACCEPT_EULA: "Y"
+    networks:
+      - doc-network

@@ -91,3 +91,4 @@ E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\refint\BaseAndApiDo
 E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.pdb
 E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.genruntimeconfig.cache
 E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\ref\BaseAndApiDocker.dll
+E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

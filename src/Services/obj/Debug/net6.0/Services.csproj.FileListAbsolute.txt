@@ -1,0 +1,12 @@
+E:\C#\BaseAndApiDocker\src\Services\bin\Debug\net6.0\Services.deps.json
+E:\C#\BaseAndApiDocker\src\Services\bin\Debug\net6.0\Services.dll
+E:\C#\BaseAndApiDocker\src\Services\bin\Debug\net6.0\Services.pdb
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\Services.dll
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\refint\Services.dll
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\Services.pdb
+E:\C#\BaseAndApiDocker\src\Services\obj\Debug\net6.0\ref\Services.dll

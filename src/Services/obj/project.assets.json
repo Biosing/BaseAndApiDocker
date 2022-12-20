@@ -3261,19 +3261,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Biosing\\.nuget\\packages\\": {}
+    "C:\\Users\\vladislav.yevgrafov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\BaseAndApiDocker\\src\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Services\\Services.csproj",
-      "packagesPath": "C:\\Users\\Biosing\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\BaseAndApiDocker\\src\\Services\\obj\\",
+      "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\vladislav.yevgrafov\\.nuget\\packages\\",
+      "outputPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Biosing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vladislav.yevgrafov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3287,11 +3287,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
-              "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj"
+            "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
+              "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj"
             },
-            "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
-              "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj"
+            "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
+              "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj"
             }
           }
         }

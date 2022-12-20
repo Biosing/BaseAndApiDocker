@@ -92,6 +92,7 @@ E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.pd
 E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.genruntimeconfig.cache
 E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\ref\BaseAndApiDocker.dll
 E:\C#\BaseAndApiDocker\src\BaseAndApiDocker\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+<<<<<<< HEAD
 C:\Multi-repo\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.csproj.AssemblyReference.cache
 C:\Multi-repo\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.GeneratedMSBuildEditorConfig.editorconfig
 C:\Multi-repo\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.AssemblyInfoInputs.cache
@@ -186,3 +187,5 @@ C:\Multi-repo\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\scopedcss\b
 C:\Multi-repo\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.csproj.CopyComplete
 C:\Multi-repo\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\BaseAndApiDocker.genruntimeconfig.cache
 C:\Multi-repo\BaseAndApiDocker\src\BaseAndApiDocker\obj\Debug\net6.0\ref\BaseAndApiDocker.dll
+=======
+>>>>>>> dev

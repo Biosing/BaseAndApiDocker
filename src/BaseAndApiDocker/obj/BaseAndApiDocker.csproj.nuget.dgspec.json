@@ -257,11 +257,19 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
                 "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj"
               },
               "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
                 "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj"
+=======
+              "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
+                "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj"
+              },
+              "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
+                "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj"
+>>>>>>> dev
               }
             }
           }

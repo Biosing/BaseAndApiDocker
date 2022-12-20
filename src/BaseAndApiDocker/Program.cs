@@ -1,5 +1,8 @@
 using BaseAndApiDocker.Config;
 using Database;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
 
 var builder = WebApplication.CreateBuilder(args);
 

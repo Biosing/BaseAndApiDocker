@@ -22,6 +22,7 @@ builder.Services.AddDataProtection().PersistKeysToFileSystem(new DirectoryInfo(@
 });
 
 var app = builder.Build();
+
 app.UseSwagger();
 app.UseSwaggerUI();
 

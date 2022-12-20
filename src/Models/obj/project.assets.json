@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\vladislav.yevgrafov\\.nuget\\packages\\": {}
+    "C:\\Users\\Biosing\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj",
+      "projectUniqueName": "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj",
-      "packagesPath": "C:\\Users\\vladislav.yevgrafov\\.nuget\\packages\\",
-      "outputPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\obj\\",
+      "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj",
+      "packagesPath": "C:\\Users\\Biosing\\.nuget\\packages\\",
+      "outputPath": "E:\\C#\\BaseAndApiDocker\\src\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vladislav.yevgrafov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Biosing\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

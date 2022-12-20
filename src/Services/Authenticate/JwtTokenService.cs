@@ -3,18 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Models.Users;
-<<<<<<< HEAD
-=======
 using Models.Utils.I18N;
->>>>>>> dev
 using Models.ValueObjects;
 using Services.Authenticate.Requests;
 using Services.Users;
 using Services.Utils;
-<<<<<<< HEAD
-using Services.Utils.I18N;
-=======
->>>>>>> dev
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;

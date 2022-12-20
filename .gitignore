@@ -8,3 +8,9 @@
 *.suo
 *.user
 *.sln.docstates
+/src/BaseAndApiDocker/bin
+/src/BaseAndApiDocker/obj
+/src/Database/bin
+/src/Database/obj
+/src/Models /bin
+/src/Models /obj

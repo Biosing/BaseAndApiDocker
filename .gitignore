@@ -332,3 +332,5 @@ ASALocalRun/
 .mfractor/
 src/.DS_Store
 .DS_Store
+/src/Database/obj/Debug/net6.0/Database.csproj.AssemblyReference.cache
+/src/Services/obj/Debug/net6.0/Services.csproj.AssemblyReference.cache

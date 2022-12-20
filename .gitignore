@@ -8,8 +8,9 @@
 *.suo
 *.user
 *.sln.docstates
-/src/BaseAndApiDocker/bin/Debug/net6.0
-/src/BaseAndApiDocker/obj/Debug/net6.0/refint/BaseAndApiDocker.dll
-/src/BaseAndApiDocker/obj/Debug/net6.0/ref/BaseAndApiDocker.dll
-/src/Database/obj/Debug/net6.0/ref/Database.dll
-/src/Database/obj/Debug/net6.0/refint/Database.dll
+/src/BaseAndApiDocker/bin
+/src/BaseAndApiDocker/obj
+/src/Database/bin
+/src/Database/obj
+/src/Models /bin
+/src/Models /obj

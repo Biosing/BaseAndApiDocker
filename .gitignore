@@ -3,3 +3,8 @@
 /src/BaseAndApiDocker/src/Database/obj/Debug/net6.0	
 /src/BaseAndApiDocker/src/Models/obj/Debug/net6.0	
 /src/BaseAndApiDocker/src/Services/obj/Debug/net6.0	
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates

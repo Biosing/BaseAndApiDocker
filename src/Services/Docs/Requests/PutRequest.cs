@@ -9,8 +9,6 @@ namespace Services.Docs.Requests
 {
     public class PutRequest
     {
- 
-        public string Name { get; init; }
 
         public long DocTypeId { get; init; }
 

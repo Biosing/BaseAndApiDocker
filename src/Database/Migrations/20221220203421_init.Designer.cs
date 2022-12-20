@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221220140351_Doc_whit_type_and_add_user_table")]
-    partial class Docwhittypeandaddusertable
+    [Migration("20221220203421_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,8 +61,7 @@ namespace Database.Migrations
 
                     b.HasIndex("CreatedUserId");
 
-                    b.HasIndex("DocTypeId")
-                        .IsUnique();
+                    b.HasIndex("DocTypeId");
 
                     b.HasIndex("Number")
                         .IsUnique();
@@ -135,8 +134,8 @@ namespace Database.Migrations
                         .IsRequired();
 
                     b.HasOne("Models.Docs.DocType", "DocType")
-                        .WithOne()
-                        .HasForeignKey("Models.Docs.Doc", "DocTypeId")
+                        .WithMany()
+                        .HasForeignKey("DocTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

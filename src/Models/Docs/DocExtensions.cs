@@ -30,5 +30,16 @@ namespace Models.Docs
 
             throw new InvalidOperationException(DataAnnotationErrorMessages.DocNotFound);
         }
+
+        public static Doc IsOwnerOrRecipient(this Doc doc, long userId)
+        {
+            if (doc.CreatedUserId == userId || doc.ReceiverUserId == userId)
+            {
+                return doc;
+            }
+
+            throw new InvalidOperationException(DataAnnotationErrorMessages.NotOwnerOrRecipient);
+        }
+        
     }
 }

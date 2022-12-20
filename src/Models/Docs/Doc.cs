@@ -24,7 +24,6 @@ namespace Models.Docs
         public virtual DocType DocType { get; protected set; }
         
         [Required(ErrorMessage = DataAnnotationErrorMessages.Required)]
-        
         public DateTimeOffset CreatedDate { get; protected set; }
         
         [Required(ErrorMessage = DataAnnotationErrorMessages.Required)]
@@ -37,5 +36,21 @@ namespace Models.Docs
 
         [Required(ErrorMessage = DataAnnotationErrorMessages.Required)]
         public string Content { get; protected set; }
+
+        protected Doc()
+        {
+        }
+
+        public Doc(string name, long docTypeId, DateTimeOffset createdDate, long createdUserId, long receiverUserId, string content)
+        {
+            
+            Name = name;
+            Number = DateTime.Now.Ticks + DateTime.Now.Second + DateTime.Now.Millisecond;
+            DocTypeId = docTypeId;
+            CreatedDate = DateTimeOffset.Now;
+            CreatedUserId = createdUserId;
+            ReceiverUserId = receiverUserId;
+            Content = content;
+        }
     }
 }

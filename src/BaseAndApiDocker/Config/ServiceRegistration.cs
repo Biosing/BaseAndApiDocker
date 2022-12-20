@@ -2,6 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Services.Authenticate;
+using Services.Docs;
 using System.Text;
 
 namespace BaseAndApiDocker.Config
@@ -10,7 +11,9 @@ namespace BaseAndApiDocker.Config
     {
         public static void Setup(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IJwtTokenService, JwtTokenService>();
+            services
+                .AddScoped<IJwtTokenService, JwtTokenService>()
+                .AddScoped<IDocService, DocService>();
 
             services.AddAuthentication(authOption =>
             {
@@ -61,6 +64,7 @@ namespace BaseAndApiDocker.Config
                         new string[]{}
                     }
                 });
+                options.OperationFilter<SwaggerFileOperationFilter>();
             });
 
         }

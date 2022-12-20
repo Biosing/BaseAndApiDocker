@@ -2,9 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Models;
 using Models.Users;
+using Models.Utils;
 using Models.Utils.I18N;
 using Models.ValueObjects;
+using Newtonsoft.Json.Linq;
 using Services.Authenticate.Requests;
 using Services.Users;
 using Services.Utils;
@@ -16,16 +19,26 @@ namespace Services.Authenticate
 {
     public class JwtTokenService : IJwtTokenService
     {
+        private const string ConfigKey = "Authentication:Secret";
+        
         private readonly DatabaseContext _context;
         private readonly IConfiguration _configuration;
 
-        public JwtTokenService(DatabaseContext context, IConfiguration configuration)
+        private readonly string _secret;
+        private readonly string _issuer = new("CT");
+        private readonly string _audience = new("users");
+
+        private readonly IJwtCacheStorage _jwtCache;
+
+        public JwtTokenService(DatabaseContext context, IConfiguration configuration, IJwtCacheStorage jwtCache)
         {
             _context = context;
             _configuration = configuration;
+            _jwtCache = jwtCache;
+            _secret = configuration[ConfigKey];
         }
 
-        public async Task<string> AuthenticateAsync(UserCredentialRequests userCredential)
+        public async Task<Jwt> AuthenticateAsync(UserCredentialRequests userCredential)
         {
             userCredential.ThrowIfNull(nameof(userCredential));
             
@@ -59,7 +72,11 @@ namespace Services.Authenticate
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+
+            var newJwt = new JwtToken(_secret, new PortalUserClaims(user).Identity(), _issuer, _audience);
+            await _jwtCache.SaveJwtAsync(user.Id, newJwt);
+            
+            return newJwt;
         }
 
         private async Task<User> UserOrFailAsync(string email)

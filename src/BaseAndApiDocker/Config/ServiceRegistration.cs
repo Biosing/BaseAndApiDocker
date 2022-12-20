@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Models.Utils;
 using Services.Authenticate;
 using Services.Docs;
 using System.Text;
@@ -11,24 +12,37 @@ namespace BaseAndApiDocker.Config
     {
         public static void Setup(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddHttpContextAccessor();
+            services.AddHttpClient();
+            services.AddDistributedMemoryCache();
+
+            services.AddTransient<IHttpContext, AppHttpContext>();
+            
+            services.AddScoped<ICache, ApplicationCache>();
+            services.AddScoped<IJwtCacheStorage, JwtCacheStorage>();
+
+            services.AddScoped<IAuthorization, Authorization>();
+
             services
                 .AddScoped<IJwtTokenService, JwtTokenService>()
                 .AddScoped<IDocService, DocService>();
 
+
             services.AddAuthentication(authOption =>
             {
-                authOption.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                authOption.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(jwtOption => {
-                var key = configuration.GetValue<string>("JwtConfig:Key");
-                var keyBytes = Encoding.ASCII.GetBytes(key);
-                jwtOption.SaveToken = true;
-                jwtOption.TokenValidationParameters = new TokenValidationParameters()
+                authOption.DefaultAuthenticateScheme = "Bearer";
+                authOption.DefaultChallengeScheme = "OpenIdConnect";
+            }).AddJwtBearer("Bearer", x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters()
                 {
-                    IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
-                    ValidateLifetime = true,
-                    ValidateAudience = false,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new JwtSecretKey(new string(configuration["Authentication:Secret"])),
                     ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true
                 };
             });
 

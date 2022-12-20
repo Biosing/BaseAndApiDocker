@@ -1,14 +1,10 @@
-﻿using Services.Authenticate.Requests;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Models;
+using Services.Authenticate.Requests;
 
 namespace Services.Authenticate
 {
     public interface IJwtTokenService
     {
-        Task<string> AuthenticateAsync(UserCredentialRequests userCredential);
+        Task<Jwt> AuthenticateAsync(UserCredentialRequests userCredential);
     }
 }

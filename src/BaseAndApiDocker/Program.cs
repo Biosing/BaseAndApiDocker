@@ -3,6 +3,7 @@ using Database;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption;
 using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
+using Microsoft.Extensions.Caching.Distributed;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,16 @@ builder.Services.AddDataProtection().PersistKeysToFileSystem(new DirectoryInfo(@
 });
 
 var app = builder.Build();
+
+app.Lifetime.ApplicationStarted.Register(() =>
+{
+    var currentTimeUTC = DateTime.UtcNow.ToString();
+    byte[] encodedCurrentTimeUTC = System.Text.Encoding.UTF8.GetBytes(currentTimeUTC);
+    var options = new DistributedCacheEntryOptions()
+        .SetSlidingExpiration(TimeSpan.FromSeconds(20));
+    app.Services.GetService<IDistributedCache>()
+                              .Set("cachedTimeUTC", encodedCurrentTimeUTC, options);
+});
 
 app.UseSwagger();
 app.UseSwaggerUI();

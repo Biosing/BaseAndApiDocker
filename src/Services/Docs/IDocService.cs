@@ -6,6 +6,7 @@ namespace Services.Docs
 {
     public interface IDocService
     {
+        Task DeleteAsync(long id);
         Task<long> PutAsync(PutRequest request, IFormFile file);
     }
 }

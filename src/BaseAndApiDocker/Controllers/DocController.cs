@@ -24,5 +24,13 @@ namespace BaseAndApiDocker.Controllers
 
             return Ok(id);
         }
+
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> DeleteAsync([FromQuery] long id)
+        {
+            await _service.DeleteAsync(id);
+
+            return Ok();
+        }
     }
 }

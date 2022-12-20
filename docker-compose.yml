@@ -20,7 +20,6 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: https://+:5001
       ASPNETCORE_HTTPS_PORT: 5001
-      ConnectionStrings:Database: Server=db; Database=db-docker-dev; User Id=sa; Password=Str0ngPass!;
     ports:
       - 5001:5001
     networks:

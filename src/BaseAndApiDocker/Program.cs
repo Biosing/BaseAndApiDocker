@@ -13,7 +13,6 @@ builder.Services.AddControllers();
 DatabaseConfig.Setup(builder.Services, builder.Configuration);
 ServiceRegistration.Setup(builder.Services, builder.Configuration);
 
-var app = builder.Build();
 
 builder.Services.AddDataProtection().PersistKeysToFileSystem(new DirectoryInfo(@"\temp-keys\"))
 .UseCryptographicAlgorithms(new AuthenticatedEncryptorConfiguration()
@@ -22,6 +21,7 @@ builder.Services.AddDataProtection().PersistKeysToFileSystem(new DirectoryInfo(@
     ValidationAlgorithm = ValidationAlgorithm.HMACSHA256
 });
 
+var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 

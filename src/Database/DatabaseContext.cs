@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Models.Docs;
 using Models.Users;
 
 namespace Database
@@ -11,5 +12,7 @@ namespace Database
         }
         
         public DbSet<User> Users { get; set; }
+        public DbSet<DocType> DocTypes { get; set; }
+        public DbSet<Doc> Docs { get; set; }
     }
 }

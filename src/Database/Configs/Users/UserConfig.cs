@@ -9,6 +9,8 @@ namespace Database.Configs.Users
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
+            builder.ToTable("Users");
+            
             builder
                 .HasIndex(x => x.IIN)
                 .IsUnique(true);

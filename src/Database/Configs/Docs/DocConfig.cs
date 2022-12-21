@@ -20,11 +20,10 @@ namespace Models.Docs
             builder
                 .HasIndex(x => x.Number)
                 .IsUnique(true);
-            
+
             builder
                 .HasOne(x => x.DocType)
-                .WithOne()
-                .HasForeignKey<Doc>(x => x.DocTypeId);
+                .WithMany();
 
 
             builder

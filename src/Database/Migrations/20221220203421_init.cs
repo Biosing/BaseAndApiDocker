@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Database.Migrations
 {
     /// <inheritdoc />
-    public partial class Docwhittypeandaddusertable : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,6 +23,21 @@ namespace Database.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DocTypes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Login = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    IIN = table.Column<string>(type: "nvarchar(12)", maxLength: 12, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -68,8 +83,7 @@ namespace Database.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Docs_DocTypeId",
                 table: "Docs",
-                column: "DocTypeId",
-                unique: true);
+                column: "DocTypeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Docs_Number",
@@ -81,6 +95,12 @@ namespace Database.Migrations
                 name: "IX_Docs_ReceiverUserId",
                 table: "Docs",
                 column: "ReceiverUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_IIN",
+                table: "Users",
+                column: "IIN",
+                unique: true);
         }
 
         /// <inheritdoc />
@@ -91,6 +111,9 @@ namespace Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "DocTypes");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

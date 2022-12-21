@@ -1,16 +1,15 @@
-﻿using Azure.Core;
+﻿using BaseAndApiDocker.Controllers;
 using Database;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models.Docs;
+using Models.Dto.Docs;
 using Services.Authenticate;
 using Services.Docs.Requests;
 using Services.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Models.Utils;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Services.Docs
 {
@@ -28,7 +27,6 @@ namespace Services.Docs
         public async Task DeleteAsync(long id)
         {
             id.ThrowIfNull(nameof(id));
-            
             var authUserid = _auth.CurrentUser().Id;
 
             var doc = await _context.Docs
@@ -41,13 +39,41 @@ namespace Services.Docs
             await _context.SaveChangesAsync();
         }
 
+        public async Task<FileContentResult> GetAsync(long id)
+        {
+            id.ThrowIfNull(nameof(id));
+            var authUserid = _auth.CurrentUser().Id;
+
+            var doc = await _context.Docs.AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Id == id);
+            doc.HasOrFail()
+            .IsOwnerOrRecipient(authUserid);
+
+            
+            return new FileContentResult(Convert.FromBase64String(doc.Content), "application/octet-stream") { FileDownloadName = doc.Name };
+        }
+
+        public async Task<IReadOnlyCollection<ListDto>> ListAsync(ListRequest request)
+        {
+            request.ThrowIfNull(nameof(request));
+            var authUserid = _auth.CurrentUser().Id;
+            IQueryable<Doc> query = _context.Docs;
+
+            return await query
+                .When(request.StartDate.HasValue, x => x.CreatedDate >= request.StartDate.Value)
+                .When(request.EndDate.HasValue, x => x.CreatedDate <= request.EndDate.Value)
+                .Where(x => x.CreatedUserId == authUserid || x.ReceiverUserId == authUserid)
+                .OrderBy(x => x.Name)
+                .AllAsync(x => new ListDto(x));
+        }
+
         public async Task<long> PutAsync(PutRequest request, IFormFile file)
         {
             request.ThrowIfNull(nameof(request));
             file.ThrowIfNull(nameof(file));
             
             Doc doc = new Doc(
-                request.Name,
+                file.FileName,
                 request.DocTypeId,
                 DateTimeOffset.Now,
                 request.CreatedUserId,

@@ -5,7 +5,10 @@
         public const string Required = nameof(Required);
         public const string MaxLength = nameof(MaxLength);
         public const string MinLength = nameof(MinLength);
-        public const string IncorrectIINOrPassword = nameof(IncorrectIINOrPassword);
-        
+        public const string NotOwner = nameof(NotOwner);
+        public const string DocNotFound = nameof(DocNotFound); 
+        public const string IncorrectIINOrPassword = nameof(IncorrectIINOrPassword); 
+
+
     }
 }

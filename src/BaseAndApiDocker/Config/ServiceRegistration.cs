@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Models.Utils;
 using Services.Authenticate;
+using Services.Debug;
 using Services.Docs;
 using System.Text;
 
@@ -25,7 +26,9 @@ namespace BaseAndApiDocker.Config
 
             services
                 .AddScoped<IJwtTokenService, JwtTokenService>()
-                .AddScoped<IDocService, DocService>();
+                .AddScoped<IDocService, DocService>()
+                .AddScoped<IDebugService, DebugService>();
+            
 
 
             services.AddAuthentication(authOption =>

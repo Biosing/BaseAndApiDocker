@@ -12,8 +12,6 @@ namespace Services.Docs.Requests
 
         public long DocTypeId { get; init; }
 
-        public long CreatedUserId { get; init; }
-
         public long ReceiverUserId { get; init; }
     }
 }

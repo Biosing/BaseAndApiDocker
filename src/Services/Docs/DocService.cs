@@ -71,12 +71,13 @@ namespace Services.Docs
         {
             request.ThrowIfNull(nameof(request));
             file.ThrowIfNull(nameof(file));
-            
+            var authUserid = _auth.CurrentUser().Id;
+
             Doc doc = new Doc(
                 file.FileName,
                 request.DocTypeId,
                 DateTimeOffset.Now,
-                request.CreatedUserId,
+                authUserid,
                 request.ReceiverUserId,
                 ContentToBase64(file));
 

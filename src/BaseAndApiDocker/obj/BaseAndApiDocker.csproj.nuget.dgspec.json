@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C#\\BaseAndApiDocker\\src\\BaseAndApiDocker\\BaseAndApiDocker.csproj": {}
+    "C:\\Multi-repo\\BaseAndApiDocker\\src\\BaseAndApiDocker\\BaseAndApiDocker.csproj": {}
   },
   "projects": {
-    "E:\\C#\\BaseAndApiDocker\\src\\BaseAndApiDocker\\BaseAndApiDocker.csproj": {
+    "C:\\Multi-repo\\BaseAndApiDocker\\src\\BaseAndApiDocker\\BaseAndApiDocker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\BaseAndApiDocker\\src\\BaseAndApiDocker\\BaseAndApiDocker.csproj",
+        "projectUniqueName": "C:\\Multi-repo\\BaseAndApiDocker\\src\\BaseAndApiDocker\\BaseAndApiDocker.csproj",
         "projectName": "BaseAndApiDocker",
-        "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\BaseAndApiDocker\\BaseAndApiDocker.csproj",
-        "packagesPath": "C:\\Users\\Biosing\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\BaseAndApiDocker\\src\\BaseAndApiDocker\\obj\\",
+        "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\BaseAndApiDocker\\BaseAndApiDocker.csproj",
+        "packagesPath": "C:\\Users\\vladislav.yevgrafov\\.nuget\\packages\\",
+        "outputPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\BaseAndApiDocker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Biosing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vladislav.yevgrafov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
-                "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj"
+              "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
+                "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj"
               },
-              "E:\\C#\\BaseAndApiDocker\\src\\Services\\Services.csproj": {
-                "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Services\\Services.csproj"
+              "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\Services.csproj": {
+                "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\Services.csproj"
               }
             }
           }
@@ -89,17 +89,17 @@
         }
       }
     },
-    "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
+    "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj",
-        "packagesPath": "C:\\Users\\Biosing\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\BaseAndApiDocker\\src\\Database\\obj\\",
+        "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\vladislav.yevgrafov\\.nuget\\packages\\",
+        "outputPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Biosing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vladislav.yevgrafov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,8 +113,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
-                "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj"
+              "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
+                "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj"
               }
             }
           }
@@ -178,17 +178,17 @@
         }
       }
     },
-    "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
+    "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\Biosing\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\BaseAndApiDocker\\src\\Models\\obj\\",
+        "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\vladislav.yevgrafov\\.nuget\\packages\\",
+        "outputPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Biosing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vladislav.yevgrafov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -247,17 +247,17 @@
         }
       }
     },
-    "E:\\C#\\BaseAndApiDocker\\src\\Services\\Services.csproj": {
+    "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\BaseAndApiDocker\\src\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\Biosing\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\BaseAndApiDocker\\src\\Services\\obj\\",
+        "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\vladislav.yevgrafov\\.nuget\\packages\\",
+        "outputPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Biosing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vladislav.yevgrafov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -271,11 +271,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
-                "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Database\\Database.csproj"
+              "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj": {
+                "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Database\\Database.csproj"
               },
-              "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
-                "projectPath": "E:\\C#\\BaseAndApiDocker\\src\\Models\\Models.csproj"
+              "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj": {
+                "projectPath": "C:\\Multi-repo\\BaseAndApiDocker\\src\\Models\\Models.csproj"
               }
             }
           }

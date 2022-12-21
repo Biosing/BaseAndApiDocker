@@ -27,7 +27,7 @@ namespace BaseAndApiDocker.Config
             services
                 .AddScoped<IJwtTokenService, JwtTokenService>()
                 .AddScoped<IDocService, DocService>()
-                .AddScoped<IDebugService, DebugService>();
+                .AddScoped<IDebug2Service, DebugService>();
             
 
 

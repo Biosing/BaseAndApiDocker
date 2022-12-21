@@ -9,9 +9,9 @@ namespace BaseAndApiDocker.Controllers
     [ApiController]
     public class DebugController : ControllerBase
     {
-        private readonly IDebugService _debugService;
+        private readonly ITestService _debugService;
 
-        public DebugController(IDebugService debugService)
+        public DebugController(ITestService debugService)
         {
             _debugService = debugService;
         }

@@ -14,6 +14,7 @@ namespace Models.Dto.Docs
 {
     public class ListDto
     {
+        public long Id { get; set; }
         public string Name { get; init; }
         public long Number { get; init; }
         public long DocTypeId { get; init; }
@@ -24,7 +25,8 @@ namespace Models.Dto.Docs
         public ListDto(Doc doc)
         {
             doc.ThrowIfNull(nameof(doc));
-            
+
+            Id = doc.Id;
             Name = doc.Name;
             Number = doc.Number;
             DocTypeId = doc.DocTypeId;

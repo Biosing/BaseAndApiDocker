@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Services.Debug
 {
-    public interface IDebugService
+    public interface ITestService
     {
         Task AddTestRecordsToTheBatabaseAsync();
     }

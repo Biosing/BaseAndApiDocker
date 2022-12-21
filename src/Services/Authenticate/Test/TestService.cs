@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace Services.Debug
 {
-    public class DebugService : IDebugService
+    public class TestService : ITestService
     {
         private readonly DatabaseContext _context;
 
-        public DebugService(DatabaseContext dataContext)
+        public TestService(DatabaseContext dataContext)
         {
             _context = dataContext;
         }

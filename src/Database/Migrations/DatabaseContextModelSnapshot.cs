@@ -58,8 +58,7 @@ namespace Database.Migrations
 
                     b.HasIndex("CreatedUserId");
 
-                    b.HasIndex("DocTypeId")
-                        .IsUnique();
+                    b.HasIndex("DocTypeId");
 
                     b.HasIndex("Number")
                         .IsUnique();
@@ -132,8 +131,8 @@ namespace Database.Migrations
                         .IsRequired();
 
                     b.HasOne("Models.Docs.DocType", "DocType")
-                        .WithOne()
-                        .HasForeignKey("Models.Docs.Doc", "DocTypeId")
+                        .WithMany()
+                        .HasForeignKey("DocTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

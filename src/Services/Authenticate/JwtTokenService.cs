@@ -42,15 +42,6 @@ namespace Services.Authenticate
         {
             userCredential.ThrowIfNull(nameof(userCredential));
             
-            if (await _context.Users.FirstOrDefaultAsync(x => x.IIN == "123456789001") == null)
-            {
-                await _context
-                    .Users
-                    .AddAsync(
-                        new User("Admin", "123456789001", new UserPasswordHash("Qwerty123$").Value()));
-                await _context.SaveChangesAsync();
-            }
-            
             User user = await UserOrFailAsync(userCredential.IIN);
             if (!user.HashedPassword().Same(userCredential.Password))
             {

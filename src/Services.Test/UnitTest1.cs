@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace Services.Test
 {
     public class UnitTest1
